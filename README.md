@@ -6,5 +6,6 @@
 - nvim
 - tms (via cargo)
 - github-cli
+- ripgrep
 
 - tpm (from source) git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
