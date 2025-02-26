@@ -69,4 +69,4 @@ alias ls="ls --color"
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-. "$HOME/.cargo/env"
+export PATH=$PATH:~/.cargo/bin
