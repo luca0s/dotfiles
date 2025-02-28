@@ -14,12 +14,16 @@ autoload -U promptinit; promptinit
 prompt pure
 
 # Set Pure Prompt colors
-zstyle :prompt:pure:path color '#31748f'
-zstyle ':prompt:pure:prompt:*' color '#eb6f92'
-zstyle :prompt:pure:prompt:success color '#ebbcba'
-zstyle :prompt:pure:git:branch color '#9ccfd8'
-zstyle :prompt:pure:git:dirty color '#e0def4'
-zstyle :prompt:pure:git:execution_time color '#f6c177'
+zstyle :prompt:pure:path color '#6e94b2'
+zstyle ":prompt:pure:prompt:*" color '#606079'
+zstyle :prompt:pure:prompt:error color '#df6882'
+zstyle :prompt:pure:prompt:success color '#405065'
+zstyle :prompt:pure:git:branch color '#aeaed1'
+zstyle :prompt:pure:git:dirty color '#c3c3d5'
+zstyle :prompt:pure:git:execution_time color '#e8b589'
+zstyle :prompt:pure:git:action color '#90a0b5'
+zstyle :prompt:pure:git:arrow color '#90a0b5'
+zstyle :prompt:pure:git:stash color '#90a0b5'
 
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -62,6 +66,8 @@ setopt hist_find_no_dups
 
 # Aliases
 alias ls="ls --color"
+alias cls="clear"
+alias vim="nvim"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
