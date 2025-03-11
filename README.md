@@ -8,5 +8,3 @@
 - github-cli
 - ripgrep
 - man-db
-
-- tpm (from source) git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
