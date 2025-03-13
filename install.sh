@@ -8,12 +8,12 @@ REPO_NEOVIM="https://github.com/luca0s/nvim.git"
 # 1. Install git and yay
 echo "Installing git and yay ..."
 
-sudo pacman -S --no-confirm --needed git base-devel
+sudo pacman -S --noconfirm --needed git base-devel
 git clone https://aur.archlinux.org/yay.git || { echo Failed to clone yay repo; exit 1; }
 cd yay || { echo Failed to move to directory; exit 1; }
-makepkg -si --no-confirm || { echo Failed to install yay form AUR; exit 1; }
+makepkg -si --noconfirm || { echo Failed to install yay form AUR; exit 1; }
 
-yay -Syu --no-confirm || { echo Failed to upgrade system; exit 1; }
+yay -Syu --noconfirm || { echo Failed to upgrade system; exit 1; }
 
 # 2. Clone the dotfiles repo
 echo "Cloning dotfiles repo ..."
@@ -21,7 +21,7 @@ git clone "$REPO_URL" "~/dotfiles" || { echo Failed to clone dotfiles; exit 1; }
 
 # 3. Install packages from pkglist
 echo "Installing all the packages ..."
-yay -S --no-confirm < "~/dotfiles/pkg.txt" || { echo Failed to install packages from package list; exit 1; }
+yay -S --noconfirm < "~/dotfiles/pkg.txt" || { echo Failed to install packages from package list; exit 1; }
 
 # 4. Download the neovim config
 echo "Installing neovim config ..."
