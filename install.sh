@@ -1,7 +1,6 @@
 #!/bin/bash
 
 REPO_URL="https://github.com/luca0s/dotfiles.git"
-CLONE_DIR="~"
 PGK_LIST="$CLONE_DIR/pkg.txt"
 REPO_NEOVIM="https://github.com/luca0s/nvim.git"
 
@@ -11,14 +10,14 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 
 # 2. Clone the dotfiles repo
 echo "Cloning dotfiles repo ..."
-git clone "$REPO_URL" "$CLONE_DIR"
+git clone "$REPO_URL" "~/dotfiles"
 
 # 3. Install packages from pkglist
 echo "Installing all the packages ..."
 yay -S < "$PGK_LIST"
 
 # 4. Download the neovim config
-echo "Installin neovim config ..."
+echo "Installing neovim config ..."
 git clone "$REPO_NEOVIM" "~/.config/nvim"
 
 # 5. Install rust and tms
