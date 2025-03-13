@@ -1,7 +1,6 @@
 #!/bin/bash
 
 REPO_URL="https://github.com/luca0s/dotfiles.git"
-PGK_LIST="$CLONE_DIR/pkg.txt"
 REPO_NEOVIM="https://github.com/luca0s/nvim.git"
 
 # 1. Install git and yay
@@ -14,7 +13,7 @@ git clone "$REPO_URL" "~/dotfiles"
 
 # 3. Install packages from pkglist
 echo "Installing all the packages ..."
-yay -S < "$PGK_LIST"
+yay -S < "~/dotfiles/pkg.txt"
 
 # 4. Download the neovim config
 echo "Installing neovim config ..."
