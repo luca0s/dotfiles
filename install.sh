@@ -8,7 +8,7 @@ REPO_NEOVIM="https://github.com/luca0s/nvim.git"
 # 1. Install git and yay
 echo "Installing git and yay ..."
 
-sudo pacman -S --needed git base-devel
+sudo pacman -S --no-confirm --needed git base-devel
 git clone https://aur.archlinux.org/yay.git || { echo Failed to clone yay repo; exit 1; }
 cd yay || { echo Failed to move to directory; exit 1; }
 makepkg -si --no-confirm || { echo Failed to install yay form AUR; exit 1; }
