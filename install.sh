@@ -21,7 +21,7 @@ git clone "$REPO_URL" "~/dotfiles" || { echo Failed to clone dotfiles; exit 1; }
 
 # 3. Install packages from pkglist
 echo "Installing all the packages ..."
-yay -S --noconfirm < "~/dotfiles/pkg.txt" || { echo Failed to install packages from package list; exit 1; }
+yay -S --noconfirm < "~/dotfiles/pkgs.txt" || { echo Failed to install packages from package list; exit 1; }
 
 # 4. Download the neovim config
 echo "Installing neovim config ..."
