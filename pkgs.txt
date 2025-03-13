@@ -1,0 +1,9 @@
+stow
+fzf
+zoxide
+zsh
+tmux
+nvim
+github-cli
+ripgrep
+man-db
