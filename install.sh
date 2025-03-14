@@ -20,7 +20,7 @@ echo "Cloning dotfiles repo ..."
 git clone "$REPO_URL" "$DOTS_CLONE_DIR" || { echo Failed to clone dotfiles; exit 1; }
 
 echo "Installing yay"
-exec_script yay.sh
+exec_script "yay.sh"
 
 echo "Installing all the packages ..."
 yay -S --noconfirm < "$DOTS_CLONE_DIR/pkgs.txt" || { echo Failed to install packages from package list; exit 1; }
