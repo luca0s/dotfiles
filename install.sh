@@ -16,7 +16,7 @@ exec_script(){
 }
 
 echo "Installing git"
-sudo pacman -S git || { echo Failed to install git; exit 1; }
+sudo pacman -S --noconfirm git || { echo Failed to install git; exit 1; }
 
 echo "Cloning dotfiles repo ..."
 git clone "$REPO_URL" "~/dotfiles" || { echo Failed to clone dotfiles; exit 1; }
@@ -32,6 +32,6 @@ git clone "$REPO_NEOVIM" "~/.config/nvim" || { echo Failed to clone nvim config;
 
 echo "Launching rust installer ..."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-# TODO: still need to source cargo here such that the next command dosn't fail
+# TODO: still need to source cargo here so that the next command dosn't fail
 
 cargo install tmux-sessionizer
