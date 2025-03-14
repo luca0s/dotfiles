@@ -11,6 +11,7 @@ exec_script(){
     local script_path="$DOTS_CLONE_DIR/helper_scripts/$script"
     chmod +x "$script_path"
     env "$script_path"
+    echo "returning from script call"
 }
 
 echo "Installing git"

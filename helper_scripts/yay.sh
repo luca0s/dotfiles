@@ -1,3 +1,4 @@
+echo "Installing yay"
 sudo pacman -S --noconfirm --needed base-devel
 git clone https://aur.archlinux.org/yay.git || { echo Failed to clone yay repo; exit 1; }
 cd yay || { echo Failed to move to directory; exit 1; }
