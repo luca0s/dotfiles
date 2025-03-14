@@ -16,7 +16,7 @@ exec_script(){
 }
 
 echo "Installing git"
-sudo pacman -S git
+sudo pacman -S git || { echo Failed to install git; exit 1; }
 
 echo "Cloning dotfiles repo ..."
 git clone "$REPO_URL" "~/dotfiles" || { echo Failed to clone dotfiles; exit 1; }
