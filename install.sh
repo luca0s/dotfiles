@@ -18,7 +18,7 @@ echo "Installing git"
 sudo pacman -S git
 
 echo "Cloning dotfiles repo ..."
-git clone "$REPO_URL" "$DOTS_CLONE_DIR" || { echo Failed to clone dotfiles; exit 1; }
+git clone "$REPO_URL" "~/dotfiles" || { echo Failed to clone dotfiles; exit 1; }
 
 echo "Installing yay"
 exec_script "yay.sh"
