@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Under construction
 # This script asumes a minimal install using the arch install script
 set -e
@@ -19,7 +19,7 @@ echo "Installing git"
 sudo pacman -S --noconfirm git || { echo Failed to install git; exit 1; }
 
 echo "Cloning dotfiles repo ..."
-git clone "$REPO_URL" "~/dotfiles" || { echo Failed to clone dotfiles; exit 1; }
+sudo -u luca git clone "$REPO_URL" "~/dotfiles" || { echo Failed to clone dotfiles; exit 1; }
 
 echo "Installing yay"
 exec_script "yay.sh"
