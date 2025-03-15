@@ -46,6 +46,9 @@ yay -Syu --noconfirm
 print_message "System update complete"
 
 # 4. Install packages
-print_message "Installing packaged from package list"
-yay -S < "$DOTFILES_CLONE_DIR/pkgs.txt"
-print_message "Successfully installed packaged"
+print_message "Installing packages from package list"
+yay -S --noconfirm --needed - < "$DOTFILES_CLONE_DIR/pkgs.txt"
+print_message "Successfully installed packages"
+
+# 5. Change default shell
+chsh -s "$(which zsh)"
