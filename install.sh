@@ -35,7 +35,17 @@ if ! command -v yay &> /dev/null; then
     cd "$HOME/yay"
     makepkg -si --noconfirm
 
-    print_message "Succesfully installed yay"
+    print_message "Successfully installed yay"
 else
     print_message "Yay already installed"
 fi
+
+# 3. Perform full system update
+print_message "Updating system"
+yay -Syu --noconfirm
+print_message "System update complete"
+
+# 4. Install packages
+print_message "Installing packaged from package list"
+yay -S < "$DOTFILES_CLONE_DIR/pkgs.txt"
+print_message "Successfully installed packaged"
