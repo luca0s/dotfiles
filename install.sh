@@ -1,37 +1,21 @@
 #!/bin/sh
 # Under construction
 # This script asumes a minimal install using the arch install script
+
 set -e
 
-REPO_URL="https://github.com/luca0s/dotfiles.git"
-DOTS_CLONE_DIR="~/dotfiles"
-REPO_NEOVIM="https://github.com/luca0s/nvim.git"
+DOTFILES_REPO="https://github.com/luca0s/dotfiles.git"
+DOTFILES_CLONE_DIR="~/dotfiles"
 
-exec_script(){
-    local script="$1"
-    local script_path="$DOTS_CLONE_DIR/helper_scripts/$script"
-    chmod +x "$script_path"
-    env "$script_path"
-    echo "returning from script call"
+print_message() {
+    echo -e "\n033[1;32m$1\033[0m"
 }
 
-echo "Installing git"
-sudo pacman -S --noconfirm git || { echo Failed to install git; exit 1; }
-
-echo "Cloning dotfiles repo ..."
-sudo -u luca git clone "$REPO_URL" "~/dotfiles" || { echo Failed to clone dotfiles; exit 1; }
-
-echo "Installing yay"
-exec_script "yay.sh"
-
-echo "Installing all the packages ..."
-yay -S --noconfirm < "$DOTS_CLONE_DIR/pkgs.txt" || { echo Failed to install packages from package list; exit 1; }
-
-echo "Installing neovim config ..."
-git clone "$REPO_NEOVIM" "~/.config/nvim" || { echo Failed to clone nvim config; exit 1; }
-
-echo "Launching rust installer ..."
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-# TODO: still need to source cargo here so that the next command dosn't fail
-
-cargo install tmux-sessionizer
+# 1. Clone the dotfiles repo
+print_message "Cloning dotfiles ..."
+if [[ -d "$DOTFILES_CLONE_DIR" ]]; then
+    print_message "Directory alerady exists. Removing it"
+    rm -rf "$DOTFILES_CLONE_DIR"
+fi
+git clone "$DOTFILES_REPO" "$DOTFILES_CLONE_DIR"
+print_message "Dotfiles cloned successfully"
