@@ -17,5 +17,5 @@ if [[ -d "$DOTFILES_CLONE_DIR" ]]; then
     print_message "Directory alerady exists. Removing it"
     rm -rf "$DOTFILES_CLONE_DIR"
 fi
-sudo -u luca git clone "$DOTFILES_REPO" "$DOTFILES_CLONE_DIR"
+sudo -u luca git clone "$DOTFILES_REPO" # "$DOTFILES_CLONE_DIR"
 print_message "Dotfiles cloned successfully"
