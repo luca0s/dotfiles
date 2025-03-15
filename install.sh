@@ -30,7 +30,7 @@ if ! command -v yay &> /dev/null; then
         rm -rf "$HOME/yay"
     fi
 
-    sudo pacman -S --needed -noconfirm base-devel
+    sudo pacman -S --needed --noconfirm base-devel
     git clone "$YAY_REPO"
     makepkg -si --noconfirm
 
