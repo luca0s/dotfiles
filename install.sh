@@ -32,6 +32,7 @@ if ! command -v yay &> /dev/null; then
 
     sudo pacman -S --needed --noconfirm base-devel
     git clone "$YAY_REPO"
+    cd "$HOME/yay"
     makepkg -si --noconfirm
 
     print_message "Succesfully installed yay"
