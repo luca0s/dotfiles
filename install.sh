@@ -8,7 +8,7 @@ DOTFILES_REPO="https://github.com/luca0s/dotfiles.git"
 DOTFILES_CLONE_DIR="~/dotfiles"
 
 print_message() {
-    echo -e "\n033[1;32m$1\033[0m"
+    echo -e "\n\033[1;32m$1\033[0m"
 }
 
 # 1. Clone the dotfiles repo
@@ -17,5 +17,5 @@ if [[ -d "$DOTFILES_CLONE_DIR" ]]; then
     print_message "Directory alerady exists. Removing it"
     rm -rf "$DOTFILES_CLONE_DIR"
 fi
-git clone "$DOTFILES_REPO" "$DOTFILES_CLONE_DIR"
+sudo -u luca git clone "$DOTFILES_REPO" "$DOTFILES_CLONE_DIR"
 print_message "Dotfiles cloned successfully"
