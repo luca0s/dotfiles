@@ -45,5 +45,12 @@ print_message "Installing packages from package list"
 yay -S --noconfirm --needed - < "$DOTFILES_CLONE_DIR/pkgs.txt"
 print_message "Successfully installed packages"
 
+# 4. Install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source "$HOME/.cargo/env"
+
+# 5. Install tmux-sessionizer
+cargo install tmux-sessionizer
+
 # 4. Change default shell
 chsh -s "$(which zsh)"
