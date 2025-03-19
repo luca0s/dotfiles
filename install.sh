@@ -6,6 +6,7 @@ set -e
 
 DOTFILES_REPO="https://github.com/luca0s/dotfiles.git"
 DOTFILES_CLONE_DIR="$HOME/dotfiles"
+NVIM_REPO="https://github.com/luca0s/nvim.git"
 YAY_REPO="https://aur.archlinux.org/yay.git"
 
 print_message() {
@@ -52,5 +53,13 @@ source "$HOME/.cargo/env"
 # 5. Install tmux-sessionizer
 cargo install tmux-sessionizer
 
-# 4. Change default shell
+# 6. Stow all the needed configs
+stow zshrc
+stow tmux
+stow hypr
+
+# 7. Clone nvim config
+git clone "$NVIM_REPO" "$HOME/.config/nvim"
+
+# 8. Change default shell
 chsh -s "$(which zsh)"
