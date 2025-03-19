@@ -54,6 +54,7 @@ source "$HOME/.cargo/env"
 cargo install tmux-sessionizer
 
 # 6. Stow all the needed configs
+stow kitty
 stow zshrc
 stow tmux
 stow hypr
