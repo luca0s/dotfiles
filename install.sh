@@ -46,6 +46,9 @@ print_message "Installing packages from package list"
 yay -S --noconfirm --needed - < "$DOTFILES_CLONE_DIR/pkgs.txt"
 print_message "Successfully installed packages"
 
+# Enable sddm
+sudo systemctl enable sddm.service
+
 # 4. Install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
@@ -58,6 +61,9 @@ stow kitty
 stow zshrc
 stow tmux
 stow hypr
+stow waybar
+stow rofi
+stow wallpapers
 
 # 7. Clone nvim config
 git clone "$NVIM_REPO" "$HOME/.config/nvim"
