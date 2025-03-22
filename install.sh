@@ -46,8 +46,9 @@ print_message "Installing packages from package list"
 yay -S --noconfirm --needed - < "$DOTFILES_CLONE_DIR/pkgs.txt"
 print_message "Successfully installed packages"
 
-# Enable sddm
+# Enable sddm and change theme
 sudo systemctl enable sddm.service
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/keyitdev/sddm-astronaut-theme/master/setup.sh)"
 
 # 4. Install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
