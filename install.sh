@@ -58,13 +58,16 @@ source "$HOME/.cargo/env"
 cargo install tmux-sessionizer
 
 # 6. Stow all the needed configs
-stow kitty
-stow zshrc
-stow tmux
 stow hypr
-stow waybar
+stow kitty
 stow rofi
+stow swaync
+stow tmux
 stow wallpapers
+stow waybar
+stow wlogout
+stow wofi
+stow zshrc
 
 # 7. Clone nvim config
 git clone "$NVIM_REPO" "$HOME/.config/nvim"

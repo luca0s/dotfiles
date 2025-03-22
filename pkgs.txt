@@ -1,37 +1,41 @@
-amd-ucode 20250311.b69d4b74-3
-base 3-2
-base-devel 1-2
-cliphist 1:0.6.1-1
-efibootmgr 18-3
-fzf 0.60.3-1
-git 2.49.0-1
-github-cli 2.69.0-1
-google-chrome 134.0.6998.88-1
-gst-plugin-pipewire 1:1.4.1-1
-hyprland 0.47.2-2
-hyprpaper 0.7.4-4
-kitty 0.40.0-1
-libpulse 17.0+r43+g3e2bb8a1e-1
-linux 6.13.7.arch1-1
-linux-firmware 20250311.b69d4b74-3
-linux-lts 6.12.19-1
-man-db 2.13.0-1
-neovim 0.10.4-2
-pipewire 1:1.4.1-1
-pipewire-alsa 1:1.4.1-1
-pipewire-jack 1:1.4.1-1
-pipewire-pulse 1:1.4.1-1
-ripgrep 14.1.1-1
-rofi 1.7.8-2
-sddm 0.21.0-6
-stow 2.4.1-1
-thunar 4.20.2-1
-tmux 3.5_a-1
-ttf-jetbrains-mono-nerd 3.3.0-1
-waybar 0.12.0-1
-wireplumber 0.5.8-1
-yay 12.4.2-1
-yay-debug 12.4.2-1
-zoxide 0.9.7-1
-zram-generator 1.2.1-1
-zsh 5.9-5
+btop
+cliphist
+discord
+fzf
+git
+github-cli
+google-chrome
+hypridle
+hyprland
+hyprlock
+hyprpaper
+hyprpicker
+hyprpolkitagent
+hyprshot
+kitty
+man-db
+neofetch
+neovim
+networkmanager
+npm
+otf-codenewroman-nerd
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+qt5-base
+qt6-multimedia-ffmpeg
+qt6-virtualkeyboard
+ripgrep
+sddm
+stow
+swaync
+thunar
+tmux
+ttf-jetbrains-mono-nerd
+waybar
+wireplumber
+wlogout
+wofi
+zoxide
+zsh
