@@ -50,14 +50,7 @@ print_message "Successfully installed packages"
 sudo systemctl enable sddm.service
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/keyitdev/sddm-astronaut-theme/master/setup.sh)"
 
-# 4. Install rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-source "$HOME/.cargo/env"
-
-# 5. Install tmux-sessionizer
-cargo install tmux-sessionizer
-
-# 6. Stow all the needed configs
+# 4. Stow all the needed configs
 stow hypr
 stow kitty
 stow rofi
@@ -68,9 +61,19 @@ stow waybar
 stow wlogout
 stow wofi
 stow zshrc
+stow scripts
 
-# 7. Clone nvim config
+# 5. Clone nvim config
 git clone "$NVIM_REPO" "$HOME/.config/nvim"
+
+# 6. Install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source "$HOME/.cargo/env"
+
+# 7. Install tmux-sessionizer
+cargo install tmux-sessionizer
+mkdir projects
+tms config -p ~/projects
 
 # 8. Change default shell
 chsh -s "$(which zsh)"

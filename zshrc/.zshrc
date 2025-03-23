@@ -75,4 +75,4 @@ alias vim="nvim"
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-export PATH=$PATH:~/.cargo/bin
+export PATH=$PATH:~/.cargo/bin:~/.scripts
