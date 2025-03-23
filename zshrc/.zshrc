@@ -50,6 +50,7 @@ ZSH_HIGHLIGHT_STYLES[arg0]=fg=cyan
 bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
+bindkey -s '^o' "open-workspace\n"
 
 # History
 HISTSIZE=5000
