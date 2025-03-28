@@ -50,7 +50,7 @@ ZSH_HIGHLIGHT_STYLES[arg0]=fg=cyan
 bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
-bindkey -s '^o' "open-workspace\n"
+bindkey -s '^o' "sessionizer\n"
 
 # History
 HISTSIZE=5000
@@ -77,3 +77,5 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 export PATH=$PATH:~/.cargo/bin:~/.scripts
+export PATH="/home/luca/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/luca/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
