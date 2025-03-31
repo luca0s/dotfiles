@@ -1,8 +1,8 @@
 # Hyperland Setup
-This repot contains my hyperland config aswell as a install script desigend to automate the installation process.
+This repo contains my hyprland config aswell as a install script desigend to automate the installation process.
 
-## Notes
-This script is only tested on my setup so run it at you own risk
+> [!WARNING]
+> This script is designed and tested for my use only so run it at you own risk
 
 ## Installation
 
