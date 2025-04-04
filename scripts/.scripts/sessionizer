@@ -12,11 +12,11 @@ has_session() {
 }
 
 hydrate() {
-    tmux send-keys "nvim ." c-M
-    tmux split-window -t $1 -h
-    tmux resize-pane -t $1 -x 30
-    tmux send-keys "cd $selected && clear" c-M
-    tmux select-pane -t $1 -L
+    tmux send-keys -t $1 "nvim ." c-M \;
+    tmux neww -t $1 \;
+    tmux select-window -t $1:1 \;
+    tmux send-keys -t $1 "cd $selected && clear" c-M \;
+    tmux select-window -t $1:0 \;
 }
 
 if [[ $# -eq 1 ]]; then
