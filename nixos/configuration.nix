@@ -118,6 +118,7 @@
     google-chrome
     gnome-extension-manager
     alejandra
+    libnotify
   ];
 
   programs.zsh.enable = true;
