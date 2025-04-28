@@ -76,6 +76,8 @@ alias vim="nvim"
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
+export EDITOR="nvim"
+
 export PATH=$PATH:~/.cargo/bin:~/.scripts
 export PATH="/home/luca/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/home/luca/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
