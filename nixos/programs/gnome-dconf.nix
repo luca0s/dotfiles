@@ -2,66 +2,66 @@
 {lib, ...}:
 with lib.hm.gvariant; {
   dconf.settings = {
-    "Extensions" = {
+    "org/gnome/Extensions" = {
       window-height = 808;
       window-width = 991;
     };
 
-    "Geary" = {
+    "org/gnome/Geary" = {
       migrated-config = true;
       window-maximize = true;
     };
 
-    "Snapshot" = {
+    "org/gnome/Snapshot" = {
       is-maximized = false;
       window-height = 640;
       window-width = 800;
     };
 
-    "calendar" = {
+    "org/gnome/calendar" = {
       active-view = "month";
       window-maximized = true;
       window-size = mkTuple [768 600];
     };
 
-    "control-center" = {
+    "org/gnome/control-center" = {
       last-panel = "keyboard";
       window-state = mkTuple [980 640 true];
     };
 
-    "desktop/a11y/applications" = {
+    "org/gnome/desktop/a11y/applications" = {
       screen-magnifier-enabled = false;
       screen-reader-enabled = false;
     };
 
-    "desktop/a11y/magnifier" = {
+    "org/gnome/desktop/a11y/magnifier" = {
       mag-factor = 2.0;
     };
 
-    "desktop/app-folders" = {
+    "org/gnome/desktop/app-folders" = {
       folder-children = ["Utilities" "YaST" "Pardus"];
     };
 
-    "desktop/app-folders/folders/Pardus" = {
+    "org/gnome/desktop/app-folders/folders/Pardus" = {
       categories = ["X-Pardus-Apps"];
       name = "X-Pardus-Apps.directory";
       translate = true;
     };
 
-    "desktop/app-folders/folders/Utilities" = {
+    "org/gnome/desktop/app-folders/folders/Utilities" = {
       apps = ["org.freedesktop.GnomeAbrt.desktop" "nm-connection-editor.desktop" "org.gnome.baobab.desktop" "org.gnome.Connections.desktop" "org.gnome.DejaDup.desktop" "org.gnome.DiskUtility.desktop" "org.gnome.Evince.desktop" "org.gnome.FileRoller.desktop" "org.gnome.font-viewer.desktop" "org.gnome.Loupe.desktop" "org.gnome.seahorse.Application.desktop" "org.gnome.tweaks.desktop" "org.gnome.Usage.desktop"];
       categories = ["X-GNOME-Utilities"];
       name = "X-GNOME-Utilities.directory";
       translate = true;
     };
 
-    "desktop/app-folders/folders/YaST" = {
+    "org/gnome/desktop/app-folders/folders/YaST" = {
       categories = ["X-SuSE-YaST"];
       name = "suse-yast.directory";
       translate = true;
     };
 
-    "desktop/background" = {
+    "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
       picture-uri = "file:///home/luca/.local/share/backgrounds/2025-04-28-22-51-50-2.png";
@@ -70,12 +70,12 @@ with lib.hm.gvariant; {
       secondary-color = "#000000000000";
     };
 
-    "desktop/input-sources" = {
+    "org/gnome/desktop/input-sources" = {
       sources = [(mkTuple ["xkb" "de"])];
       xkb-options = ["terminate:ctrl_alt_bksp"];
     };
 
-    "desktop/interface" = {
+    "org/gnome/desktop/interface" = {
       accent-color = "blue";
       color-scheme = "prefer-dark";
       enable-animations = false;
@@ -83,29 +83,29 @@ with lib.hm.gvariant; {
       toolkit-accessibility = false;
     };
 
-    "desktop/notifications" = {
+    "org/gnome/desktop/notifications" = {
       application-children = ["org-gnome-geary" "org-gnome-console"];
       show-banners = true;
     };
 
-    "desktop/notifications/application/org-gnome-console" = {
+    "org/gnome/desktop/notifications/application/org-gnome-console" = {
       application-id = "org.gnome.Console.desktop";
     };
 
-    "desktop/notifications/application/org-gnome-geary" = {
+    "org/gnome/desktop/notifications/application/org-gnome-geary" = {
       application-id = "org.gnome.Geary.desktop";
     };
 
-    "desktop/peripherals/mouse" = {
-      accel-profile = "flat";
+    "org/gnome/desktop/peripherals/mouse" = {
+      accel-profile = "org/gnome/flat";
       speed = 0.0;
     };
 
-    "desktop/peripherals/touchpad" = {
+    "org/gnome/desktop/peripherals/touchpad" = {
       two-finger-scrolling-enabled = true;
     };
 
-    "desktop/screensaver" = {
+    "org/gnome/desktop/screensaver" = {
       color-shading-type = "solid";
       picture-options = "zoom";
       picture-uri = "file:///home/luca/.local/share/backgrounds/2025-04-28-22-51-50-2.png";
@@ -113,11 +113,11 @@ with lib.hm.gvariant; {
       secondary-color = "#000000000000";
     };
 
-    "desktop/search-providers" = {
+    "org/gnome/desktop/search-providers" = {
       sort-order = ["org.gnome.Settings.desktop" "org.gnome.Contacts.desktop" "org.gnome.Nautilus.desktop"];
     };
 
-    "desktop/wm/keybindings" = {
+    "org/gnome/desktop/wm/keybindings" = {
       activate-window-menu = [];
       begin-move = [];
       begin-resize = [];
@@ -163,49 +163,49 @@ with lib.hm.gvariant; {
       unmaximize = ["<Alt>Down"];
     };
 
-    "desktop/wm/preferences" = {
+    "org/gnome/desktop/wm/preferences" = {
       num-workspaces = 6;
     };
 
-    "epiphany/state" = {
+    "org/gnome/epiphany/state" = {
       is-maximized = true;
       window-size = mkTuple [1024 736];
     };
 
-    "evolution-data-server" = {
+    "org/gnome/evolution-data-server" = {
       migrated = true;
     };
 
-    "file-roller/listing" = {
+    "org/gnome/file-roller/listing" = {
       list-mode = "as-folder";
       show-path = false;
       sort-method = "name";
       sort-type = "ascending";
     };
 
-    "file-roller/ui" = {
+    "org/gnome/file-roller/ui" = {
       sidebar-width = 200;
       window-height = 480;
       window-width = 600;
     };
 
-    "gnome-system-monitor" = {
+    "org/gnome/gnome-system-monitor" = {
       cpu-colors = [(mkTuple [(mkUint32 0) "#e01b24"]) (mkTuple [1 "#ff7800"]) (mkTuple [2 "#f6d32d"]) (mkTuple [3 "#33d17a"]) (mkTuple [4 "#26a269"]) (mkTuple [5 "#62a0ea"]) (mkTuple [6 "#1c71d8"]) (mkTuple [7 "#613583"]) (mkTuple [8 "#9141ac"]) (mkTuple [9 "#c061cb"]) (mkTuple [10 "#ffbe6f"]) (mkTuple [11 "#f9f06b"]) (mkTuple [12 "#8ff0a4"]) (mkTuple [13 "#2ec27e"]) (mkTuple [14 "#1a5fb4"]) (mkTuple [15 "#c061cb"]) (mkTuple [16 "#79998335f332"]) (mkTuple [17 "#a6b0f3327999"]) (mkTuple [18 "#f3327999ca2c"]) (mkTuple [19 "#7999eda7f332"]) (mkTuple [20 "#f332d5417999"]) (mkTuple [21 "#b1c67999f332"]) (mkTuple [22 "#7999f3328e4a"]) (mkTuple [23 "#f33279998862"])];
       current-tab = "resources";
       show-dependencies = false;
       show-whose-processes = "user";
     };
 
-    "gnome-system-monitor/proctree" = {
+    "org/gnome/gnome-system-monitor/proctree" = {
       col-26-visible = false;
       col-26-width = 0;
     };
 
-    "interface" = {
+    "org/gnome/interface" = {
       color-scheme = false;
     };
 
-    "maps" = {
+    "org/gnome/maps" = {
       last-viewed-location = [0.0 0.0];
       map-type = "MapsVectorSource";
       transportation-type = "pedestrian";
@@ -213,53 +213,53 @@ with lib.hm.gvariant; {
       zoom-level = 2;
     };
 
-    "mutter" = {
+    "org/gnome/mutter" = {
       dynamic-workspaces = false;
     };
 
-    "mutter/keybindings" = {
+    "org/gnome/mutter/keybindings" = {
       toggle-tiled-left = ["<Alt>Left"];
       toggle-tiled-right = ["<Alt>Right"];
     };
 
-    "mutter/wayland/keybindings" = {
+    "org/gnome/mutter/wayland/keybindings" = {
       restore-shortcuts = [];
     };
 
-    "nautilus/preferences" = {
+    "org/gnome/nautilus/preferences" = {
       default-folder-viewer = "icon-view";
       migrated-gtk-settings = true;
       search-filter-time-type = "last_modified";
     };
 
-    "nautilus/window-state" = {
+    "org/gnome/nautilus/window-state" = {
       initial-size = mkTuple [1245 834];
       initial-size-file-chooser = mkTuple [890 550];
     };
 
-    "portal/filechooser/org/gnome/Settings" = {
+    "org/gnome/portal/filechooser/org/gnome/Settings" = {
       last-folder-path = "/home/luca/dotfiles/wallpapers/wallpapers";
     };
 
-    "settings-daemon/plugins/color" = {
+    "org/gnome/settings-daemon/plugins/color" = {
       night-light-enabled = false;
       night-light-schedule-automatic = false;
     };
 
-    "settings-daemon/plugins/media-keys" = {
+    "org/gnome/settings-daemon/plugins/media-keys" = {
       custom-keybindings = ["/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"];
       help = [];
       magnifier-zoom-in = [];
       magnifier-zoom-out = [];
     };
 
-    "settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       binding = "<Alt>Return";
       command = "kitty";
       name = "Open Terminal";
     };
 
-    "settings-deamon/plugins/media-keys" = {
+    "org/gnome/settings-deamon/plugins/media-keys" = {
       custom-keybindings = ["/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"];
       help = [];
       magnifier = [];
@@ -268,13 +268,13 @@ with lib.hm.gvariant; {
       screen-reader = [];
     };
 
-    "settings-deamon/plugins/media-keys/custom0" = {
+    "org/gnome/settings-deamon/plugins/media-keys/custom0" = {
       binding = "<Alt>Return";
       command = "kitty";
       name = "Launch Terminal";
     };
 
-    "shell" = {
+    "org/gnome/shell" = {
       disable-user-extensions = false;
       disabled-extensions = [];
       enabled-extensions = ["switcher@landau.fi" "space-bar@luchrioh" "tactile@lundal.io" "just-perfection-desktop@just-perfection"];
@@ -282,11 +282,11 @@ with lib.hm.gvariant; {
       welcome-dialog-last-shown-version = "47.2";
     };
 
-    "shell/app-switcher" = {
+    "org/gnome/shell/app-switcher" = {
       current-workspace-only = true;
     };
 
-    "shell/extensions/just-perfection" = {
+    "org/gnome/shell/extensions/just-perfection" = {
       accessibility-menu = true;
       animation = 0;
       background-menu = true;
@@ -315,7 +315,7 @@ with lib.hm.gvariant; {
       workspaces-in-app-grid = true;
     };
 
-    "shell/extensions/space-bar/appearance" = {
+    "org/gnome/shell/extensions/space-bar/appearance" = {
       active-workspace-background-color = "rgb(36,36,36)";
       active-workspace-border-color = "rgba(255,255,255,0.3)";
       active-workspace-border-radius = 32;
@@ -329,7 +329,7 @@ with lib.hm.gvariant; {
       workspaces-bar-padding = 1;
     };
 
-    "shell/extensions/space-bar/behavior" = {
+    "org/gnome/shell/extensions/space-bar/behavior" = {
       always-show-numbers = false;
       indicator-style = "workspaces-bar";
       position = "left";
@@ -339,15 +339,15 @@ with lib.hm.gvariant; {
       toggle-overview = true;
     };
 
-    "shell/extensions/space-bar/shortcuts" = {
+    "org/gnome/shell/extensions/space-bar/shortcuts" = {
       enable-activate-workspace-shortcuts = false;
     };
 
-    "shell/extensions/space-bar/state" = {
+    "org/gnome/shell/extensions/space-bar/state" = {
       version = 32;
     };
 
-    "shell/extensions/switcher" = {
+    "org/gnome/shell/extensions/switcher" = {
       activate-after-ms = mkUint32 300;
       font-size = mkUint32 18;
       icon-size = mkUint32 18;
@@ -359,7 +359,7 @@ with lib.hm.gvariant; {
       show-switcher = ["<Alt>d"];
     };
 
-    "shell/extensions/tactile" = {
+    "org/gnome/shell/extensions/tactile" = {
       border-color = "rgba(111,111,111,0.5)";
       col-0 = 2;
       col-3 = 2;
@@ -377,13 +377,13 @@ with lib.hm.gvariant; {
       text-color = "rgb(107,107,107)";
     };
 
-    "shell/extentions/just-perfection" = {
+    "org/gnome/shell/extentions/just-perfection" = {
       animations = 2;
       enable-animations = true;
       support-notifier-type = 0;
     };
 
-    "shell/keybindings" = {
+    "org/gnome/shell/keybindings" = {
       focus-active-notification = [];
       screen-shot = [];
       screenshot-window = [];
@@ -394,7 +394,7 @@ with lib.hm.gvariant; {
       toggle-quick-settings = [];
     };
 
-    "shell/world-clocks" = {
+    "org/gnome/shell/world-clocks" = {
       locations = [];
     };
   };

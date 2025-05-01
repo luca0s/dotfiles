@@ -4,11 +4,9 @@
   inputs,
   lib,
   ...
-}: let
-  gvariant = import (inputs.home-manager + "/modules/lib/gvariant.nix") {
-    inherit lib;
-  };
-in {
+}:
+
+{
   imports = [
     ./programs/gnome-dconf.nix
   ];
