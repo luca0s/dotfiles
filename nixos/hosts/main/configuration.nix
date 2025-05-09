@@ -9,7 +9,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./fhs.nix
+    ./../../nixosModules/fhs.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
