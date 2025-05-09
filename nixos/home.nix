@@ -4,9 +4,7 @@
   inputs,
   lib,
   ...
-}:
-
-{
+}: {
   imports = [
     ./programs/gnome-dconf.nix
   ];
@@ -32,10 +30,14 @@
     stow
     tmux
     gcc
+    yazi
     kitty
     fzf
+    gh
     zoxide
     dconf2nix
+    rustup
+    nodejs_23
     gnomeExtensions.switcher
     gnomeExtensions.space-bar
     gnomeExtensions.tactile
