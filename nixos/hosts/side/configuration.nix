@@ -8,7 +8,7 @@
   ...
 }: {
   imports = [
-    ./hardware-configuration.nix
+    ./../../hosts/side/hardware-configuration.nix
     ./../../nixosModules/fhs.nix
   ];
 
