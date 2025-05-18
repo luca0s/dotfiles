@@ -21,7 +21,7 @@
       specialArgs = {inherit inputs;};
       modules = [
         inputs.home-manager.nixosModules.default
-        ./hosts/side/configuration.nix
+        ./hosts/wsl-main/configuration.nix
       ];
     };
   };
