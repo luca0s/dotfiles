@@ -24,6 +24,11 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
  home.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+    starship
+    python310
+    sshfs
+    openconnect
     texliveFull
     deno
     tree-sitter
