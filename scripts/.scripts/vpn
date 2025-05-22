@@ -1,0 +1,1 @@
+sudo openconnect --protocol=anyconnect --useragent="AnyConnect" --authgroup="RWTH-VPN (Full Tunnel)" --user="tt032407" -b vpn.rwth-aachen.de
