@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+tmuxinator $(tmuxinator list | tail -n +2 | tr -s '[:space:]' '\n' | fzf)
